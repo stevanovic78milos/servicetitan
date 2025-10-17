@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ServiceLite – Jobs</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0066cc">
+</head>
+<body>
+  <header>
+    <h1>ServiceLite</h1>
+    <button id="syncBtn" class="btn-header">Sync</button>
+  </header>
+
+  <main>
+    <section id="jobList" class="card-list"></section>
+
+    <section id="jobDetail" class="hidden">
+      <button id="backBtn" class="btn-back">← Jobs</button>
+      <h2 id="detTitle"></h2>
+      <p  id="detAddr"></p>
+      <p  id="detDesc"></p>
+
+      <h3>Checklist</h3>
+      <ul id="checklist"></ul>
+
+      <label>Notes
+        <textarea id="notes" rows="4"></textarea>
+      </label>
+
+      <label>Parts used
+        <input id="parts" type="text" placeholder="e.g. Filter x2">
+      </label>
+
+      <button id="signatureBtn">Collect signature</button>
+      <canvas id="signaturePad" class="hidden"></canvas>
+      <button id="saveSignBtn" class="hidden">Save signature</button>
+
+      <button id="completeBtn" class="btn-primary">Mark complete</button>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
